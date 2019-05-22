@@ -25,5 +25,21 @@ class FilmsController extends Controller
        return redirect(route('films.index'));
        
     }
+    function edit(Request $req,Film $film){
+        return view('films.edit',['film'=>$film]);
+
+    }
+    function update(Request $req,Film $film){
+        $film->name=$req->input('film.name');
+        $film->year=$req->input('film.year');
+        $film->duration=$req->input('film.duration');
+        $film->link=$req->input('film.link');
+        $film->save();
+        return redirect(route('films.show',['film'=>$film]));
+    }
+    function delete(Request $req, Film $film){
+        $film->delete();
+        return redirect(route('films.index'));
+    }
 }
  

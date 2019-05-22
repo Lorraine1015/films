@@ -19,6 +19,7 @@
                 <th>Año</th>
                 <th>Duracion</th>
                 <th>Link</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +34,16 @@
                     <td>{{$film->year}}</td>
                     <td>{{$film->duration}}</td>
                     <td>{{$film->link}}</td>
-                    
+                    <td>
+                        <a href="{{route('films.edit',['film'=>$film]) }}">
+                            Editar
+                        </a>
+                        <form method="POST" action="{{ route('films.delete',['film'=>$film]) }}">
+                            @csrf
+                            {{method_field('DELETE')}}
+                            <input type="submit" value="Eliminar">
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
