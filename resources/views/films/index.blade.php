@@ -8,12 +8,12 @@
 </head>
 <body>
     <h1>Peliculas</h1>
-    <a href ="{{route('films.create')}}">
+    <a href ="{{route('films.create')}}"><!-- enlace con la creacion de datos -->
         Crear una pelicula
     </a>
     <table>
         <thead>
-            <tr>
+            <tr><!-- Columnas de la tabla -->
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Año</th>
@@ -23,10 +23,10 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($films as $film)
+            @foreach($films as $film)<!-- Recorre el array  -->
                 <tr>
                     <td>
-                        <a href="{{route('films.show',['film'=>$film]) }}">
+                        <a href="{{route('films.show',['film'=>$film]) }}"><!-- Ligado a la muestra de datos -->
                             {{$film ->id}}
                         </a>
                     </td>
@@ -35,17 +35,17 @@
                     <td>{{$film->duration}}</td>
                     <td>{{$film->link}}</td>
                     <td>
-                        <a href="{{route('films.edit',['film'=>$film]) }}">
+                        <a href="{{route('films.edit',['film'=>$film]) }}"><!-- Ligado a la edicion de datos -->
                             Editar
                         </a>
-                        <form method="POST" action="{{ route('films.delete',['film'=>$film]) }}">
+                        <form method="POST" action="{{ route('films.delete',['film'=>$film]) }}"><!-- Ligado a la eliminacion de datos -->
                             @csrf
                             {{method_field('DELETE')}}
                             <input type="submit" value="Eliminar">
                         </form>
                     </td>
                 </tr>
-            @endforeach
+            @endforeach<!-- Fin del recorrido del array -->
         </tbody>
     </table>
     

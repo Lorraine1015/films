@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>Nueva pelicula</h1>
-    <form method="POST" action="{{ route('films.store') }}">
+    <form method="POST" action="{{ route('films.store') }}"><!-- Manda a llamar la funcion.store para almacenar la info. -->
      @csrf
         <p>Nombre</p>
-        <input type="text" value="" name="film[name]">
+        <input type="text" value="" name="film[name]"><!-- film[nombre que se  le asigna en la tabla] -->
         <p>Año</p>
         <input type="text" value="" name="film[year]">
         <p>Duracion</p>
