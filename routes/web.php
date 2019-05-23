@@ -33,3 +33,12 @@ Route::get ('genres/{genre}','GenresController@show')->name('genres.show');
 Route::post('genres','GenresController@store')->name('genres.store');
 Route::put('genres/{genre}','GenresController@update')->name('genres.update');
 Route::delete('genres/{genre}','GenresController@delete')->name('genres.delete');
+
+//RUTAS DE CATALOGS//
+Route::get ('catalogs','CatalogsController@index')->name('catalogs.index');
+Route::get ('catalogs/create','CatalogsController@create')->name('catalogs.create');
+Route::get('catalogs/{catalog}/edit','CatalogsController@edit')->name('catalogs.edit');
+Route::get ('catalogs/{catalog}','CatalogsController@show')->name('catalogs.show');
+Route::post('catalogs','CatalogsController@store')->name('catalogs.store');
+Route::put('catalogs/{catalog}','CatalogsController@update')->name('catalogs.update');
+Route::delete('catalogs/{catalog}','CatalogsController@delete')->name('catalogs.delete');
