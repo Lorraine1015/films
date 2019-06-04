@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <h1>{{$catalog->name}}</h1>
 <p>Editar lista</p>
     <form method="POST"  action="{{route('films.catalogs.update',['catalog'=>$catalog])}}">
@@ -14,3 +16,4 @@
         </ul>
         <input type="submit" value="Guardar">
     </form>
+@endsection

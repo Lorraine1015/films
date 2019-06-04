@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Editar lista</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-</head>
-<body>
+@extends('layouts.main')
+@section('content')
     <h1>Editar lista</h1>
     <form method="POST"  action="{{route('catalogs.update',['catalog'=>$catalog])}}">
         @csrf 
@@ -18,5 +11,4 @@
         
         <input type="submit" value="Editar">
     </form>
-</body>
-</html>
+@endsection

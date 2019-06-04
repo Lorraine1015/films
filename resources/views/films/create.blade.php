@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Nuevas peliculas</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-</head>
-<body>
+@extends('layouts.main')
+@section('content')
     <h1>Nueva pelicula</h1>
     <form method="POST" action="{{ route('films.store') }}"><!-- Manda a llamar la funcion.store para almacenar la info. -->
      @csrf
@@ -29,5 +23,4 @@
         <input type="submit">
     </form>
     
-</body>
-</html>
+@endsection

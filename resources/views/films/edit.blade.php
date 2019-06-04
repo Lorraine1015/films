@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Editar pelicula</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-</head>
-<body>
+@extends('layouts.main')
+@section('content')
+
     <h1>Editar pelicula</h1>
     <form method="POST"  action="{{route('films.update',['film'=>$film])}}"><!-- Se acciona junto con la funcion.update,su argumento -->
         @csrf 
@@ -21,5 +15,4 @@
         <input type="text" value="{{$film->link}}" name="film[link]">
         <input type="submit" value="Editar">
     </form>
-</body>
-</html>
+@endsection

@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Listas</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-</head>
-<body>
+@extends('layouts.main')
+@section('content')
+
     <h1>Listas</h1>
     <a href ="{{route('catalogs.create')}}">
         Crear una lista
@@ -48,5 +42,5 @@
             @endforeach
     </table>
     
-</body>
-</html>
+
+@endsection

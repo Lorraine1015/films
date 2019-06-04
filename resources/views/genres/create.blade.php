@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Nuevos generos</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-</head>
-<body>
+@extends('layouts.main')
+@section('content')
     <h1>Nuevo genero</h1>
     <form method="POST" action="{{route('genres.store')}}">
     @csrf
@@ -15,5 +8,4 @@
         <input type="submit" >
     </form>
     
-</body>
-</html>
+@endsection
