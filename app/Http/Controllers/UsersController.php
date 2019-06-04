@@ -33,8 +33,8 @@ class UsersController extends Controller
     }
     public function authenticate(Request $req){
         $credentials=$req->only('email','password');
-        if(Auth::attemp($credentials)){
-            return redirect()->intended('users.profile');
+        if(Auth::attempt($credentials)){
+            return redirect()->intended('perfil');
         }
     }
 }
