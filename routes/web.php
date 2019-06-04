@@ -9,9 +9,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/','HomeController@index')->name('homepage');
+
 //RUTAS DE AUTENTICACION DE SESION DE USUARIO//
 Route::get('registro','UsersController@register')->name('users.register');
 Route::post('registro','UsersController@store')->name('users.store');
