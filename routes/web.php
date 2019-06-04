@@ -52,3 +52,6 @@ Route::get ('genres/{genre}','GenresController@show')->name('genres.show');
 Route::post('genres','GenresController@store')->name('genres.store');
 Route::put('genres/{genre}','GenresController@update')->name('genres.update');
 Route::delete('genres/{genre}','GenresController@delete')->name('genres.delete');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

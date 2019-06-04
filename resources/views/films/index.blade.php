@@ -35,7 +35,7 @@
                     <td>{{$film->year}}</td>
                     <td>{{$film->duration}}</td>
                     <td>{{$film->link}}</td>
-                    <td>{{$item->genre->name}}</td>
+                    <td>{{$film->genre->name}}</td>
                     <td>
                         <a href="{{route('films.edit',['film'=>$film]) }}"><!-- Ligado a la edicion de datos -->
                             Editar

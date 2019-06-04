@@ -20,7 +20,7 @@ class Film extends Model
         return $this->belongsToMany('App\Catalog');
 
     }
-    public function genres(){
+    public function genre(){
         return $this->belongsTo('App\Genre');
     }
     

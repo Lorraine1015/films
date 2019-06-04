@@ -19,7 +19,7 @@
         <p>Link</p>
         <input type="text" value="" name="film[link]">
         <p>Genero</p>
-        <select name="films[genre_id]">
+        <select name="film[genre_id]">
             @foreach($genres as $item)
                 <option value="{{$item->id}}">
                     {{$item->name}}

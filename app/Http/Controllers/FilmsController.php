@@ -14,7 +14,7 @@ class FilmsController extends Controller
     //Nos muestra la vista de creacion
     function create(Request $req){
         $genres=Genre::all();
-        return view('films.create',['genre'=> $genres]);
+        return view('films.create',['genres'=> $genres]);
     }
     //Nos muestra los datos ingresados
     function show(Request $req, Film  $film){
