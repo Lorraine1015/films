@@ -18,6 +18,14 @@
         <input type="text" value="" name="film[duration]">
         <p>Link</p>
         <input type="text" value="" name="film[link]">
+        <p>Genero</p>
+        <select name="films[genre_id]">
+            @foreach($genres as $item)
+                <option value="{{$item->id}}">
+                    {{$item->name}}
+                </option>
+            @endforeach    
+        </select>
         <input type="submit">
     </form>
     

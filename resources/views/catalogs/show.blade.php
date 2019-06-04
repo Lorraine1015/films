@@ -13,5 +13,11 @@
     <p><a href="{{ route ('catalogs.index') }}">
     Regresar a las listas</a>
     </p>
+    <h2>Peliculas</h2>
+    <ul>
+        @foreach($film->catalogs as $item)
+        <li>{{$item->name}}</li>
+        @endforeach
+    </ul>
 </body>
 </html>

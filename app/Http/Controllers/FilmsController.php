@@ -1,9 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Film;
+use App\Genre;
 
 class FilmsController extends Controller
 {
@@ -14,7 +13,8 @@ class FilmsController extends Controller
     }
     //Nos muestra la vista de creacion
     function create(Request $req){
-        return view('films.create');
+        $genres=Genre::all();
+        return view('films.create',['genre'=> $genres]);
     }
     //Nos muestra los datos ingresados
     function show(Request $req, Film  $film){
@@ -30,7 +30,6 @@ class FilmsController extends Controller
     //Nos ayuda a editar los datos
     function edit(Request $req,Film $film){
         return view('films.edit',['film'=>$film]);
-
     }
     //Nos actuliza la info.
     function update(Request $req,Film $film){
@@ -47,4 +46,3 @@ class FilmsController extends Controller
         return redirect(route('films.index'));
     }
 }
- 

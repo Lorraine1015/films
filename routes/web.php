@@ -12,10 +12,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//RUTAS DE AUTENTICACION DE SESION DE USUARIO//
 Route::get('registro','UsersController@register')->name('users.register');
 Route::post('registro','UsersController@store')->name('users.store');
-Route::get('perfil','UsersController@profile')->name('users.profile');
+Route::get('perfil','UsersController@profile')
+->middleware('auth')
+->name('users.profile');
 Route::get('cerrar_sesion','UsersController@logout')->name('users.logout');
+Route::get('iniciar-sesion','UsersController@login')->name('login');
+Route::post('iniciar-sesion','UsersController@authenticate')->name('users.authenticate');
 //RUTAS DE FILMS//
 Route::get ('films','FilmsController@index')->name('films.index');//Vista principal
 Route::get('films/create','FilmsController@create')->name('films.create');//Crea la informacion para la base de datos

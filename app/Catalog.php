@@ -15,4 +15,8 @@ class Catalog extends Model
     protected $fillable = [
         'name', 'description'
     ];
+    public function films(){
+        return $this->belongsToMany('App\Film');
+        
+    }
 }

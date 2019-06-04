@@ -19,6 +19,7 @@
                 <th>Año</th>
                 <th>Duracion</th>
                 <th>Link</th>
+                <th>Genero</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -34,6 +35,7 @@
                     <td>{{$film->year}}</td>
                     <td>{{$film->duration}}</td>
                     <td>{{$film->link}}</td>
+                    <td>{{$item->genre->name}}</td>
                     <td>
                         <a href="{{route('films.edit',['film'=>$film]) }}"><!-- Ligado a la edicion de datos -->
                             Editar
@@ -43,6 +45,7 @@
                             {{method_field('DELETE')}}
                             <input type="submit" value="Eliminar">
                         </form>
+                        
                     </td>
                 </tr>
             @endforeach<!-- Fin del recorrido del array -->

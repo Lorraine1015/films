@@ -9,7 +9,7 @@ class CreateFilmsTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return void 
      */
     public function up()
     {
@@ -19,6 +19,9 @@ class CreateFilmsTable extends Migration
             $table->date('year');
             $table->time('duration');
             $table->string('link');
+
+            $table->unsignedBigInteger('genre_id'); //añadimos a la tabla el elemento relacionado
+            $table->foreign('genre_id')->references('id')->on('genres');//se el denota que es una llave foranea y de donde proviene
             $table->timestamps();
         });
     }

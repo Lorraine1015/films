@@ -13,6 +13,15 @@ class Film extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'year', 'duration', 'link'
+        'name', 'year', 'duration', 'link','genre_id'
     ];
+    
+    public function catalogs(){
+        return $this->belongsToMany('App\Catalog');
+
+    }
+    public function genres(){
+        return $this->belongsTo('App\Genre');
+    }
+    
 }

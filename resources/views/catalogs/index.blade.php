@@ -40,6 +40,9 @@
                             {{method_field('DELETE')}}
                             <input type="submit" value="Eliminar">
                         </form>
+                        <a href="{{route('films.catalogs.edit',['film'=>$films])}}">
+                            Modificar catalogos
+                        </a>
                     </td>
                 </tr>
             @endforeach
