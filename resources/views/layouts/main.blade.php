@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Peliculas</h1>
-
+    @include('layouts.partials.social-media')
     <ul>
         <li>
             <a href="{{route('home')}}">Inicio</a>
@@ -25,5 +25,6 @@
 
     </ul>
     @yield('content')
+    @include('layouts.partials.social-media')
 </body>
 </html>
