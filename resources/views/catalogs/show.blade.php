@@ -15,7 +15,7 @@
     </p>
     <h2>Peliculas</h2>
     <ul>
-        @foreach($film->catalogs as $item)
+        @foreach($catalog->films as $item)
         <li>{{$item->name}}</li>
         @endforeach
     </ul>
