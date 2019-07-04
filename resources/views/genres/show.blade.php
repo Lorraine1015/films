@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($genres->films as $item)<!-- Recorre el array  -->
+            @foreach($genre->films as $item)<!-- Recorre el array  -->
                 <tr>
                     <td>
                       {{$item ->id}}
